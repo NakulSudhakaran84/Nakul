@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="generic.BaseClass">
+        <methods>
+          <include name="setUpSuite"/>
+        </methods>
+      </class> <!-- generic.BaseClass -->
+      <class name="testcases.LoginTestActiTime">
+        <methods>
+          <include name="loginApp1"/>
+          <include name="pageLoad"/>
+          <include name="takePhoto"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.LoginTestActiTime -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

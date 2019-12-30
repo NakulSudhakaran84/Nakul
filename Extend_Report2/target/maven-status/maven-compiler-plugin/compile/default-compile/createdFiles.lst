@@ -1,0 +1,5 @@
+generic\BaseClass.class
+generic\UtilityClass.class
+generic\IAutoConst.class
+generic\BrowserFactory.class
+page\LoginPage.class

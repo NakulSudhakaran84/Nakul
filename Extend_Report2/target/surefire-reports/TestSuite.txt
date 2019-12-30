@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.555 s <<< FAILURE! - in TestSuite
+testcases.LoginTestActiTime.loginApp1  Time elapsed: 9.849 s  <<< FAILURE!
+java.lang.AssertionError: did not expect to find [true] but found [false]
+	at testcases.LoginTestActiTime.loginApp1(LoginTestActiTime.java:51)
+
