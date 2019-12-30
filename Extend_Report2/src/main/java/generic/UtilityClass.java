@@ -17,8 +17,6 @@ public class UtilityClass {
 	
 	public static String getProperty( String path,String key)
 	{
-		
-		
 		//this is for taking data from properties file
 		String v="";
 		try {

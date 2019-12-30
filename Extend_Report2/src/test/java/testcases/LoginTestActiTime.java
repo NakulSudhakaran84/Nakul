@@ -23,7 +23,6 @@ public class LoginTestActiTime extends BaseClass {
 		
 		String username=UtilityClass.getCellVaue(XL_PATH,"ValidLogin", 1, 0);
 		String password=UtilityClass.getCellVaue(XL_PATH, "ValidLogin", 1, 1);
-		
 		loginpage.loginToActiTime(username, password);
 		
 		System.out.println("Title:"+driver.getTitle());

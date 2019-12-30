@@ -11,19 +11,18 @@ public class BrowserFactory implements IAutoConst {
 	
 	public static WebDriver startApplication(WebDriver driver,String browsername,String appURL) 
 	{
-	
-		
 		if(browsername.equals("chrome"))
 		{
 			System.setProperty(CHROME_KEY, CHROME_VALUE);
-			driver=new ChromeDriver();
-			
+			driver=new ChromeDriver();	
 		}
+		
 		else if(browsername.equals("firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
 			driver=new FirefoxDriver();
 		}
+		
 		else
 		{
 			System.out.println("we do not support this browser");
