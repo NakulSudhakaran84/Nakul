@@ -19,6 +19,7 @@ public class UtilityClass {
 	{
 		
 		
+		//this is for taking data from properties file
 		String v="";
 		try {
 			Properties p=new Properties();

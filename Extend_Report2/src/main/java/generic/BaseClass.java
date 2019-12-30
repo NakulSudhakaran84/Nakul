@@ -29,6 +29,7 @@ public class BaseClass implements IAutoConst{
 	@BeforeSuite
 	public void setUpSuite()
 	{
+		//this is BeforeSuite
 		ExtentHtmlReporter extent=new ExtentHtmlReporter(new File(REPORT_PATH));
 		report=new ExtentReports();
 		report.attachReporter(extent);
