@@ -1,8 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.555 s <<< FAILURE! - in TestSuite
-testcases.LoginTestActiTime.loginApp1  Time elapsed: 9.849 s  <<< FAILURE!
-java.lang.AssertionError: did not expect to find [true] but found [false]
-	at testcases.LoginTestActiTime.loginApp1(LoginTestActiTime.java:51)
+Tests run: 8, Failures: 3, Errors: 0, Skipped: 5, Time elapsed: 113.853 s <<< FAILURE! - in TestSuite
+testcases.LoginTestActiTime.setUp  Time elapsed: 88.014 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+timeout
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AM810LT', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Nakul-PC\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 673f96492af59863442a7850e87fc049
+
+testcases.LoginTestActiTime.takePhoto  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testcases.LoginTestActiTime.takePhoto  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.NullPointerException
 

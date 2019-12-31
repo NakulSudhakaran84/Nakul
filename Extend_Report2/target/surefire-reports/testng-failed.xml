@@ -10,6 +10,7 @@
           <include name="setUpSuite"/>
           <include name="takePhoto"/>
           <include name="tearDown"/>
+          <include name="loginApp"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- testcases.LoginTestActiTime -->
