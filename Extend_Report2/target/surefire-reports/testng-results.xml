@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="3" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="84081" started-at="2019-12-31T13:25:40 IST" finished-at="2019-12-31T13:27:04 IST">
+  <suite name="Suite" duration-ms="48664" started-at="2020-01-03T00:44:09 IST" finished-at="2020-01-03T00:44:57 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="84081" started-at="2019-12-31T13:25:40 IST" finished-at="2019-12-31T13:27:04 IST">
+    <test name="Test" duration-ms="48664" started-at="2020-01-03T00:44:09 IST" finished-at="2020-01-03T00:44:57 IST">
       <class name="testcases.LoginTestActiTime">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:testcases.LoginTestActiTime@3224f60b]" name="setUpSuite" is-config="true" duration-ms="2938" started-at="2019-12-31T13:25:37 IST" finished-at="2019-12-31T13:25:40 IST">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:testcases.LoginTestActiTime@5d76b067]" name="setUpSuite" is-config="true" duration-ms="844" started-at="2020-01-03T00:44:08 IST" finished-at="2020-01-03T00:44:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.LoginTestActiTime@3224f60b]" name="setUp" is-config="true" duration-ms="36119" started-at="2019-12-31T13:25:40 IST" finished-at="2019-12-31T13:26:16 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.LoginTestActiTime@5d76b067]" name="setUp" is-config="true" duration-ms="17113" started-at="2020-01-03T00:44:09 IST" finished-at="2020-01-03T00:44:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="pageLoad()[pri:0, instance:testcases.LoginTestActiTime@3224f60b]" name="pageLoad" is-config="true" duration-ms="466" started-at="2019-12-31T13:26:17 IST" finished-at="2019-12-31T13:26:17 IST">
+        <test-method status="PASS" signature="pageLoad()[pri:0, instance:testcases.LoginTestActiTime@5d76b067]" name="pageLoad" is-config="true" duration-ms="406" started-at="2020-01-03T00:44:26 IST" finished-at="2020-01-03T00:44:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageLoad -->
-        <test-method status="FAIL" signature="loginApp1()[pri:1, instance:testcases.LoginTestActiTime@3224f60b]" name="loginApp1" duration-ms="12851" started-at="2019-12-31T13:26:17 IST" finished-at="2019-12-31T13:26:30 IST">
+        <test-method status="FAIL" signature="invalidLoginApp()[pri:1, instance:testcases.LoginTestActiTime@5d76b067]" name="invalidLoginApp" duration-ms="11534" started-at="2020-01-03T00:44:26 IST" finished-at="2020-01-03T00:44:38 IST">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[did not expect to find [true] but found [false]]]>
+              <![CDATA[expected [actiTIME - Login] but found [actiTIME]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: did not expect to find [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [actiTIME - Login] but found [actiTIME]
 at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.failNotEquals(Assert.java:969)
-at org.testng.Assert.assertTrue(Assert.java:43)
-at org.testng.Assert.assertTrue(Assert.java:53)
-at testcases.LoginTestActiTime.loginApp1(LoginTestActiTime.java:50)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at testcases.LoginTestActiTime.invalidLoginApp(LoginTestActiTime.java:38)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -68,38 +69,38 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginApp1 -->
-        <test-method status="PASS" signature="takePhoto(org.testng.ITestResult)[pri:0, instance:testcases.LoginTestActiTime@3224f60b]" name="takePhoto" is-config="true" duration-ms="7066" started-at="2019-12-31T13:26:30 IST" finished-at="2019-12-31T13:26:37 IST">
+        </test-method> <!-- invalidLoginApp -->
+        <test-method status="PASS" signature="takePhoto(org.testng.ITestResult)[pri:0, instance:testcases.LoginTestActiTime@5d76b067]" name="takePhoto" is-config="true" duration-ms="9189" started-at="2020-01-03T00:44:38 IST" finished-at="2020-01-03T00:44:47 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginApp1 status=FAILURE method=LoginTestActiTime.loginApp1()[pri:1, instance:testcases.LoginTestActiTime@3224f60b] output={null}]]]>
+                <![CDATA[[TestResult name=invalidLoginApp status=FAILURE method=LoginTestActiTime.invalidLoginApp()[pri:1, instance:testcases.LoginTestActiTime@5d76b067] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takePhoto -->
-        <test-method status="PASS" signature="pageLoad()[pri:0, instance:testcases.LoginTestActiTime@3224f60b]" name="pageLoad" is-config="true" duration-ms="2835" started-at="2019-12-31T13:26:37 IST" finished-at="2019-12-31T13:26:40 IST">
+        <test-method status="PASS" signature="pageLoad()[pri:0, instance:testcases.LoginTestActiTime@5d76b067]" name="pageLoad" is-config="true" duration-ms="40" started-at="2020-01-03T00:44:47 IST" finished-at="2020-01-03T00:44:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageLoad -->
-        <test-method status="PASS" signature="loginApp()[pri:2, instance:testcases.LoginTestActiTime@3224f60b]" name="loginApp" duration-ms="21595" started-at="2019-12-31T13:26:40 IST" finished-at="2019-12-31T13:27:02 IST">
+        <test-method status="PASS" signature="validLoginApp()[pri:1, instance:testcases.LoginTestActiTime@5d76b067]" name="validLoginApp" duration-ms="6852" started-at="2020-01-03T00:44:47 IST" finished-at="2020-01-03T00:44:54 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginApp -->
-        <test-method status="PASS" signature="takePhoto(org.testng.ITestResult)[pri:0, instance:testcases.LoginTestActiTime@3224f60b]" name="takePhoto" is-config="true" duration-ms="1538" started-at="2019-12-31T13:27:02 IST" finished-at="2019-12-31T13:27:03 IST">
+        </test-method> <!-- validLoginApp -->
+        <test-method status="PASS" signature="takePhoto(org.testng.ITestResult)[pri:0, instance:testcases.LoginTestActiTime@5d76b067]" name="takePhoto" is-config="true" duration-ms="1489" started-at="2020-01-03T00:44:54 IST" finished-at="2020-01-03T00:44:56 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginApp status=SUCCESS method=LoginTestActiTime.loginApp()[pri:2, instance:testcases.LoginTestActiTime@3224f60b] output={null}]]]>
+                <![CDATA[[TestResult name=validLoginApp status=SUCCESS method=LoginTestActiTime.validLoginApp()[pri:1, instance:testcases.LoginTestActiTime@5d76b067] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takePhoto -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.LoginTestActiTime@3224f60b]" name="tearDown" is-config="true" duration-ms="1262" started-at="2019-12-31T13:27:03 IST" finished-at="2019-12-31T13:27:04 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.LoginTestActiTime@5d76b067]" name="tearDown" is-config="true" duration-ms="1651" started-at="2020-01-03T00:44:56 IST" finished-at="2020-01-03T00:44:57 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

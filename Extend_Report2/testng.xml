@@ -4,7 +4,6 @@
   <test name="Test">
     <classes>
       <class name="testcases.LoginTestActiTime"/>
-      <class name="generic.BaseClass"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

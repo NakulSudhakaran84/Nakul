@@ -19,7 +19,7 @@ public class BrowserFactory implements IAutoConst {
 		
 		else if(browsername.equals("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
+			System.setProperty(FIREFOX_KEY, FIREFOX_VALUE);
 			driver=new FirefoxDriver();
 		}
 		

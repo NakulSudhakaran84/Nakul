@@ -5,11 +5,11 @@
     <classes>
       <class name="testcases.LoginTestActiTime">
         <methods>
-          <include name="loginApp1"/>
           <include name="pageLoad"/>
           <include name="setUpSuite"/>
           <include name="takePhoto"/>
           <include name="tearDown"/>
+          <include name="invalidLoginApp"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- testcases.LoginTestActiTime -->

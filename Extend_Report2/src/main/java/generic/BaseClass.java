@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,7 +25,7 @@ public class BaseClass implements IAutoConst{
 	public WebDriver driver;
 	public WebDriverWait wait;
 	public ExtentReports report;
-	public ExtentTest logger;
+	public ExtentTest test;
 	
 	@BeforeSuite
 	public void setUpSuite()
@@ -48,25 +49,26 @@ public class BaseClass implements IAutoConst{
 		String strETO=UtilityClass.getProperty(SETTINGS_PATH, "ETO");
 		long ETO= Long.parseLong(strETO);
 		wait=new WebDriverWait(driver, ETO);
-		wait.until(ExpectedConditions.titleContains("actiTIME"));		
+		wait.until(ExpectedConditions.titleContains("actiTIME"));
 	}
 	
 	@AfterMethod(alwaysRun = true)
-	public void takePhoto(ITestResult res) throws IOException
+	public void takePhoto(ITestResult res) throws IOException, EmailException
 	{
-		String imgPath=UtilityClass.getPhoto(driver, PHOTO_PATH, res.getName());
 		
+		String imgPath=UtilityClass.getPhoto(driver, PHOTO_PATH, res.getName());		
 		if(res.getStatus()==ITestResult.FAILURE)
-		{
-			logger.fail("Test Failed", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+		{   
+			UtilityClass.sendEmail(driver,res.getName(),SETTINGS_PATH,EMAIL_SUBJECT_PATH,EMAIL_MESSAGE_PATH);
+			test.fail("Test Failed", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
 		}
 		else if(res.getStatus()==ITestResult.SUCCESS)
 		{
-			logger.pass("Test Passed",MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());		
+			test.pass("Test Passed",MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());		
 		}
 		else if(res.getStatus()==ITestResult.SKIP)
 		{
-			logger.skip("Test Skipped",MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());	
+			test.skip("Test Skipped",MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());	
 		}
 			report.flush();
 	}

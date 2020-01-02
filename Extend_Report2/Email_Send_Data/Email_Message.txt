@@ -1,0 +1,9 @@
+This is a System generated Mail.
+
+Hey Developer,
+           ActiTIME Login Test Failed.
+   Check out the logs.
+           
+
+Thanks
+Nakul Sudhakaran

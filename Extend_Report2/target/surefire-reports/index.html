@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.LoginTestActiTime" hash-for-method="loginApp1">loginApp1</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.LoginTestActiTime" hash-for-method="invalidLoginApp">invalidLoginApp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -116,7 +116,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.LoginTestActiTime" hash-for-method="loginApp">loginApp</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.LoginTestActiTime" hash-for-method="validLoginApp">validLoginApp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -139,13 +139,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginApp1">
-                  </a> <!-- loginApp1 -->
-                  <span class="method-name">loginApp1</span>
-                  <div class="stack-trace">java.lang.AssertionError: did not expect to find [true] but found [false]
-	at testcases.LoginTestActiTime.loginApp1(LoginTestActiTime.java:50)
+                  <a name="invalidLoginApp">
+                  </a> <!-- invalidLoginApp -->
+                  <span class="method-name">invalidLoginApp</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [actiTIME - Login] but found [actiTIME]
+	at testcases.LoginTestActiTime.invalidLoginApp(LoginTestActiTime.java:38)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 35 stack frames
+... Removed 36 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -159,9 +159,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginApp">
-                  </a> <!-- loginApp -->
-                  <span class="method-name">loginApp</span>
+                  <a name="validLoginApp">
+                  </a> <!-- validLoginApp -->
+                  <span class="method-name">validLoginApp</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -179,7 +179,6 @@
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.LoginTestActiTime&quot;/&gt;
-      &lt;class name=&quot;generic.BaseClass&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -193,7 +192,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,18 +220,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginApp')
+data.setCell(0, 1, 'invalidLoginApp')
 data.setCell(0, 2, 'testcases.LoginTestActiTime')
-data.setCell(0, 3, 21595);
+data.setCell(0, 3, 11534);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginApp1')
+data.setCell(1, 1, 'validLoginApp')
 data.setCell(1, 2, 'testcases.LoginTestActiTime')
-data.setCell(1, 3, 12851);
+data.setCell(1, 3, 6852);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -247,16 +246,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">generic.BaseClass</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpSuite</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -272,37 +264,37 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">3012 ms</span>
+                <span class="method-start">918 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">pageLoad</span>
-                <span class="method-start">39228 ms</span>
+                <span class="method-start">18123 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">loginApp1</span>
-                <span class="method-start">39699 ms</span>
+                <span class="method-name">invalidLoginApp</span>
+                <span class="method-start">18534 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">takePhoto([TestResult name=loginApp1 status=FAILURE method=LoginTestActiTime.loginApp1()[pri:1, instance:testc...)</span>
-                <span class="method-start">52701 ms</span>
+                <span class="method-name">takePhoto([TestResult name=invalidLoginApp status=FAILURE method=LoginTestActiTime.invalidLoginApp()[pri:1, in...)</span>
+                <span class="method-start">30269 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">pageLoad</span>
-                <span class="method-start">59787 ms</span>
+                <span class="method-start">39474 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginApp</span>
-                <span class="method-start">62623 ms</span>
+                <span class="method-name">validLoginApp</span>
+                <span class="method-start">39514 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">takePhoto([TestResult name=loginApp status=SUCCESS method=LoginTestActiTime.loginApp()[pri:2, instance:testcas...)</span>
-                <span class="method-start">84220 ms</span>
+                <span class="method-name">takePhoto([TestResult name=validLoginApp status=SUCCESS method=LoginTestActiTime.validLoginApp()[pri:1, instan...)</span>
+                <span class="method-start">46368 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">85761 ms</span>
+                <span class="method-start">47860 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -12,42 +12,30 @@ import page.LoginPage;
 public class LoginTestActiTime extends BaseClass {
 	
 	
-	@Test(priority = 2)
-	public void loginApp()
+	@Test(priority = 1)
+	public void validLoginApp()
 	{
-		logger=report.createTest("Valid Login to ActiTIME");
-		
+		test=report.createTest("Valid Login to ActiTIME");
 		LoginPage loginpage=PageFactory.initElements(driver, LoginPage.class);
-		
-		logger.info("Starting the Application");
-		
+		test.info("Starting the Application");
 		String username=UtilityClass.getCellVaue(XL_PATH,"ValidLogin", 1, 0);
 		String password=UtilityClass.getCellVaue(XL_PATH, "ValidLogin", 1, 1);
 		loginpage.loginToActiTime(username, password);
-		
-		System.out.println("Title:"+driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Track"));
-		
-		logger.pass("Logged in Successfully");	
+		Assert.assertTrue(driver.getTitle().contains("Time-Track"));	
+		test.pass("Logged in Successfully");	
 	}
 	
 	@Test(priority = 1)
-	public void loginApp1()
+	public void invalidLoginApp()
 	{
-		logger=report.createTest("Invalid Login to ActiTIME");
-		
+		test=report.createTest("Invalid Login to ActiTIME");
 		LoginPage loginpage=PageFactory.initElements(driver, LoginPage.class);
-		
-		logger.info("Starting the Application");
-		
+		test.info("Starting the Application");
 		String username=UtilityClass.getCellVaue(XL_PATH,"InvalidLogin", 1, 0);
 		String password=UtilityClass.getCellVaue(XL_PATH, "InvalidLogin", 1, 1);
-		
-		loginpage.loginToActiTime(username, password);
-		
-		logger.fail("Wrong Credentials");	
-		
-		Assert.assertTrue(driver.getTitle().contains("Track"));
+		loginpage.loginToActiTime(username, password);		
+		test.fail("Wrong Credentials");	
+		Assert.assertEquals("actiTIME",driver.getTitle());
 		
 		
 	}
