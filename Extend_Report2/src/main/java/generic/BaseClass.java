@@ -55,6 +55,9 @@ public class BaseClass implements IAutoConst{
 	@AfterMethod(alwaysRun = true)
 	public void takePhoto(ITestResult res) throws IOException, EmailException
 	{
+		String strITO=UtilityClass.getProperty(SETTINGS_PATH,"ITO");
+	    long ITO= Long.parseLong(strITO);
+		driver.manage().timeouts().implicitlyWait(ITO,TimeUnit.SECONDS);
 		
 		String imgPath=UtilityClass.getPhoto(driver, PHOTO_PATH, res.getName());		
 		if(res.getStatus()==ITestResult.FAILURE)
@@ -75,9 +78,7 @@ public class BaseClass implements IAutoConst{
 	@AfterClass
 	public void tearDown()
 	{	
-		String strITO=UtilityClass.getProperty(SETTINGS_PATH,"ITO");
-	    long ITO= Long.parseLong(strITO);
-		driver.manage().timeouts().implicitlyWait(ITO,TimeUnit.SECONDS);
+		
 		BrowserFactory.quitBrowser(driver);
 	}
 	

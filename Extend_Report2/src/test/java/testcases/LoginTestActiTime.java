@@ -21,6 +21,7 @@ public class LoginTestActiTime extends BaseClass {
 		String username=UtilityClass.getCellVaue(XL_PATH,"ValidLogin", 1, 0);
 		String password=UtilityClass.getCellVaue(XL_PATH, "ValidLogin", 1, 1);
 		loginpage.loginToActiTime(username, password);
+		UtilityClass.timeOut(driver,SETTINGS_PATH,"ITO");
 		Assert.assertTrue(driver.getTitle().contains("Time-Track"));	
 		test.pass("Logged in Successfully");	
 	}
@@ -34,6 +35,7 @@ public class LoginTestActiTime extends BaseClass {
 		String username=UtilityClass.getCellVaue(XL_PATH,"InvalidLogin", 1, 0);
 		String password=UtilityClass.getCellVaue(XL_PATH, "InvalidLogin", 1, 1);
 		loginpage.loginToActiTime(username, password);		
+		UtilityClass.timeOut(driver,SETTINGS_PATH,"ITO");
 		test.fail("Wrong Credentials");	
 		Assert.assertEquals("actiTIME",driver.getTitle());
 		

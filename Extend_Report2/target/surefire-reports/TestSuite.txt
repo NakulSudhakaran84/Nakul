@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 55.291 s <<< FAILURE! - in TestSuite
-testcases.LoginTestActiTime.invalidLoginApp  Time elapsed: 11.734 s  <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 68.327 s <<< FAILURE! - in TestSuite
+testcases.LoginTestActiTime.invalidLoginApp  Time elapsed: 10.063 s  <<< FAILURE!
 java.lang.AssertionError: expected [actiTIME - Login] but found [actiTIME]
-	at testcases.LoginTestActiTime.invalidLoginApp(LoginTestActiTime.java:38)
+	at testcases.LoginTestActiTime.invalidLoginApp(LoginTestActiTime.java:41)
 

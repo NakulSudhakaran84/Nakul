@@ -8,6 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Date;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
@@ -131,5 +133,12 @@ public class UtilityClass {
 		email.setMsg(emailSendData(emessage,"emessage"));
 		email.addTo(emailCredentials(path,"mailto"));
 		email.send();
+		}
+		
+		public static void timeOut(WebDriver driver,String path,String ito)
+		{
+			String strITO=UtilityClass.getProperty(path,ito);
+		    long ITO= Long.parseLong(strITO);
+			driver.manage().timeouts().implicitlyWait(ITO,TimeUnit.SECONDS);
 		}
 }
